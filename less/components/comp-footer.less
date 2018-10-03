@@ -1,0 +1,49 @@
+// =========================================================================
+// FOOTER
+// ========================================================================= */
+
+.grid-container {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 70px;
+	@media (max-width: @screen-xs) {
+		flex-direction: column;
+		.grid-content{
+			margin-bottom: @spacing-medium-px; 
+		}
+	}
+
+	@media (max-width: @screen-xs-max) {
+		padding-bottom: 20px; 
+	}
+	.image--content{
+		width: 214px;
+		height: 214px;
+		border: 3px solid @border-color;
+		display: flex;
+    	align-items: center;
+		justify-content: center;
+		margin-bottom: @spacing-large-px;
+		@media (max-width: @screen-xs) {
+			width: 100%;
+		}
+		@media (max-width: @screen-xs-max) {
+			padding: 5%;
+			width: auto;
+			height: auto;
+		}
+
+	}
+	.grid--item{
+		&-name{
+			font-size: @font-size-base;
+			font-weight: 400;
+		}
+		&-price{
+			font-size: @font-size-large;
+			font-weight: 600;
+			color: @color-primary-black;
+		}
+		
+	}
+}

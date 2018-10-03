@@ -1,0 +1,9 @@
+// ----------------------------------------------------------------------------
+//  Convert to REM
+// ----------------------------------------------------------------------------
+.font-size(@sizeValue) {
+    @remValue: @sizeValue / @mobile-base-font;
+    @pxValue: @sizeValue;
+    font-size: ~"@{pxValue}px";
+    font-size: ~"@{remValue}rem";
+}

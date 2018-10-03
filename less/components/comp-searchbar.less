@@ -1,0 +1,40 @@
+// SEARCH BAR + SEARCH FLYOUT
+// ============================================================================
+
+.header__search {
+	input[type='search'] {
+		background: @search-background;
+		width: @height-huge*3;
+		height: @height-big;
+		display: none;
+		border: none;
+		border-radius: 5px 0 0 5px;
+		padding-left: @spacing-large-px;
+		@media (max-width: @screen-xs) {
+			width: @height-huge *2
+		}
+
+	}
+	button{
+		width: @height-huge;
+		height: @height-big;
+		background: @search-background url('../images/search-icon.png') center no-repeat;
+		border: none;
+		border-radius: 5px;
+		text-indent: -99999px;
+		text-align: center;
+		line-height: @height-big;
+		vertical-align: top;
+	}
+}
+
+.js-search-show{
+	input[type='search']{
+		display: inline-block;
+	}
+	.header__search{
+		button{
+			border-radius: 0 5px 5px 0;
+		}
+	} 
+}

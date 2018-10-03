@@ -1,0 +1,74 @@
+// ============================================================================
+// REM Mixins padding/margin for single value
+// margin{margin:10}
+// ============================================================================
+
+.rem(@property, @sizeValue) when (@sizeValue = @sizeValue){
+    @remValue: @sizeValue / @mobile-base-font;
+    @pxValue: @sizeValue;
+    @{property}:  ~'@{pxValue}px';
+    @{property}: ~'@{remValue}rem';
+}
+
+// ============================================================================
+// REM Mixins padding/margin for two value
+//  margin{margin:10px 20px}
+// ============================================================================
+
+.rem-two(@property, @val1, @val2) {
+    @remValue: @val1 / @mobile-base-font;
+    @remValue1: @val2 / @mobile-base-font;
+    @{property}:  ~'@{val1}px @{val2}px';
+    @{property}: ~'@{remValue}rem @{remValue1}rem';
+}
+
+// ============================================================================
+// REM Mixins padding/margin for two value
+//  margin{margin:10px 0 20px}
+// ============================================================================
+
+.rem-three(@property, @val1, @val2, @val3) {
+    @remValue: @val1 / @mobile-base-font;
+    @remValue1: @val2 / @mobile-base-font;
+    @remValue2: @val3 / @mobile-base-font;
+    @{property}:  ~'@{val1}px @{val2}px @{val3}px';
+    @{property}: ~'@{remValue}rem @{remValue1}rem @{remValue2}rem';
+}
+
+
+// ============================================================================
+// EM Mixins padding/margin for single value
+// margin{margin:10}
+// ============================================================================
+
+.em(@property, @sizeValue) when (@sizeValue = @sizeValue){
+    @remValue: @sizeValue / @mobile-base-font;
+    @pxValue: @sizeValue;
+    @{property}:  ~'@{pxValue}px';
+    @{property}: ~'@{remValue}em';
+}
+
+// ============================================================================
+// EM Mixins padding/margin for two value
+//  margin{margin:10px 20px}
+// ============================================================================
+
+.em-two(@property, @val1, @val2) {
+    @remValue: @val1 / @mobile-base-font;
+    @remValue1: @val2 / @mobile-base-font;
+    @{property}:  ~'@{val1}px @{val2}px';
+    @{property}: ~'@{remValue}em @{remValue1}em';
+}
+
+// ============================================================================
+// EM Mixins padding/margin for two value
+//  margin{margin:10px 0 20px}
+// ============================================================================
+
+.em-three(@property, @val1, @val2, @val3) {
+    @remValue: @val1 / @mobile-base-font;
+    @remValue1: @val2 / @mobile-base-font;
+    @remValue2: @val3 / @mobile-base-font;
+    @{property}:  ~'@{val1}px @{val2}px @{val3}px';
+    @{property}: ~'@{remValue}em @{remValue1}em @{remValue2}em';
+}

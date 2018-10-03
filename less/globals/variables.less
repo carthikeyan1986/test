@@ -1,0 +1,119 @@
+// ============================================================================
+//  CORE CONFIG
+//
+//  Global Variables
+// ============================================================================
+
+@mobile-base-font: 16;
+
+
+// ----------------------------------------------------------------------------
+//  FONT MANAGEMENT
+// ----------------------------------------------------------------------------
+@font-family: 'Open Sans', sans-serif;
+
+
+// FONT SIZES
+// ----------------------------------------------------------------------------
+
+//  H    |    320 	|    768 |   1024 |   1440 |
+//  ---- | ------ 	| ------ | ------ | ------
+//  h1   |   30px 	|   n.a. |   n.a. |   n.a. |
+//  h2   |   22px	|   n.a. |   n.a. |   n.a. |
+//  h3   |   18px 	|   n.a. |   n.a. |   n.a. |
+//  h4   |   16px 	|   n.a. |   n.a. |   n.a. |
+
+@font-size-huge: 24px;
+@font-size-large: 18px;
+@font-size-base: 14px;
+@font-size-small: 12px;
+@font-size-tiny: 11px;
+
+
+
+// LINE HEIGHTS
+// ----------------------------------------------------------------------------
+@height-huge: 50px;
+@height-big: 40px;
+@height-large: 30px;
+@height-base: 20px;
+@line-height-small: 18px;
+@line-height-extra-small: 17px;
+@line-height-tiny: 16px;
+@line-height-extra-tiny: 14px;
+
+
+
+// ----------------------------------------------------------------------------
+//  COLOR MANAGEMENT
+// ----------------------------------------------------------------------------
+@font-color: #414141;
+@color-light: #dddddd;
+@font-bold-color: #333333;
+@color-lightest:#ffffff;
+@color-primary-black:#000000;
+@search-background: #f0f7fe;
+@color-secondary-danger: #f6303f;
+@color-secondary-danger-bg: #fff0f1;
+
+// BACKGROUND and border COLORS
+// ------------------------------------
+@border-color: #f6f6f6;
+@brand-color: #05549f;
+// FONT COLORS
+// ------------------------------------
+
+// ----------------------------------------------------------------------------
+//  GLOBAL SETTINGS
+// ----------------------------------------------------------------------------
+
+// Paddings/Margins
+// ----------------------------------------------------------------------------
+
+@spacing-small-px: 5px;
+@spacing-base-px: 10px;
+@spacing-base-2-px: 12px;
+@spacing-medium-px: 15px;
+@spacing-large-px: 20px;
+@spacing-extra-large-px: 40px;
+@spacing-huge-px: 60px;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+

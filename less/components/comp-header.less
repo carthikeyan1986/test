@@ -1,0 +1,21 @@
+// =========================================================================
+// HEADER
+// ========================================================================= */
+
+.global__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: @height-large;
+	@media (max-width: @screen-xs-max) {
+		padding-top: 0;
+	}
+	@media (max-width: @screen-xs) {
+		.logo{
+			display: inline-block;
+			width: 45%;
+		}
+		
+	}
+}
+

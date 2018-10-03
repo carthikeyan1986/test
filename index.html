@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrefour</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header class="global__header">
+            <a href="index.html" title="Carrefour" class="logo"><img src="images/logo.png" alt="Carrefour" /></a>
+            <div class="header__search">
+                <form name="search">
+                    <input type="search" name="search" class="js-search-text-box"/><button type="button" name="search-button" class="js-search">Search</button>
+                </form>
+            </div>
+        </header>
+        <main>
+            <div class="cus__login">
+                <h1>Sign In Now</h1>
+                <p class="login__info">Unlock awesome features!</p>
+                <form name="login"  class="c_form" id="js-customer__login">
+                    
+                        <div class="text__field">
+                            <label class="c_form--label">Username</label>
+                            <input name="user_name" type="text" />
+                        </div>
+                        <div class="text__field">
+                            <label class="c_form--label">Password</label>
+                            <input name="password" type="password" />
+                        </div>
+                        <div class="text__field text__field--checkbox">
+                            <label>
+                                <input name="remember" type="checkbox" checked="checked" />Keep me logged in
+                                <span class="text__field--checkbox--duplicate"></span>
+                            </label>
+                            <a href="#" title="forget Password">Forgot password?</a>
+                        </div>
+                        <div class="text__field">
+                            <button id="js-customer__submit" name="submit" type="button">sign in</button>
+                        </div>
+                    
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="grid-container">
+                <div class="grid-content">
+                    <a class="grid--item" href="#">
+                        <div class="image--content">
+                            <img src="images/foo_logo.png" alt="" />
+                        </div>
+                        <div class="grid--item-detail">
+                            <h2 class="grid--item-name">iphone 6 Black</h2>
+                            <p class="grid--item-price">AED 1000</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-content">
+                    <a class="grid--item" href="#">
+                        <div class="image--content">
+                            <img src="images/foo_logo.png" alt="" />
+                        </div>
+                        <div class="grid--item-detail">
+                            <h2 class="grid--item-name">iphone 6 Black</h2>
+                            <p class="grid--item-price">AED 1000</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-content">
+                    <a class="grid--item" href="#">
+                        <div class="image--content">
+                            <img src="images/foo_logo.png" alt="" />
+                        </div>
+                        <div class="grid--item-detail">
+                            <h2 class="grid--item-name">iphone 6 Black</h2>
+                            <p class="grid--item-price">AED 1000</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

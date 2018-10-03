@@ -1,0 +1,107 @@
+// ----------------------------------------------------------------------------
+//  Global file for general smaller mixins
+// ----------------------------------------------------------------------------
+
+// Default Styling of Caret
+.caret-style() {
+	content: '';
+	position: absolute;
+	.size(@selectbox-arrow-width, @selectbox-arrow-height);
+	border: 2px solid @gray-base;
+	border-top: none;
+	border-left: none;
+	transform: rotate(45deg);
+	vertical-align: middle;
+}
+
+// full width border separator BOTTOM (larger: 3px thick)
+.full-width-border-separator-bottom () {
+	.rem(padding-bottom, @spacing-base);
+	position: relative;
+
+	&:before {
+		content: " ";
+		position: absolute;
+		.rem(bottom, -4);
+		width: 100%;
+		border: @border-larger;
+
+		@media only screen and (max-width: @screen-sm-max) {
+			width: 100vw;
+			.rem(left, -@spacing-medium);
+		}
+	}
+}
+
+// full width border separator TOP (larger: 3px thick)
+.full-width-border-separator-top () {
+	.rem(padding-top, @spacing-large);
+	position: relative;
+
+	&:before {
+		content: " ";
+		position: absolute;
+		.rem(top, @spacing-large);
+		width: 100%;
+		border: @border-larger;
+
+		@media only screen and (max-width: @screen-sm-max) {
+			width: 100vw;
+			.rem(left, -@spacing-medium);
+		}
+	}
+}
+
+
+// full width border separator TOP (smaller: 1px thick)
+.full-width-border-separator-top-small () {
+	position: relative;
+
+	&:before {
+		content: " ";
+		position: absolute;
+		.rem(top, 0);
+		width: 100%;
+		border-top: 1px solid @border-color-medium;
+
+		@media only screen and (max-width: @screen-sm-max) {
+			width: 100vw;
+			.rem(left, -@spacing-medium);
+		}
+	}
+}
+
+// full width border separator TOP (smaller: 1px thick)
+.full-width-border-separator-bottom-small () {
+	position: relative;
+
+	&:before {
+		content: " ";
+		position: absolute;
+		.rem(bottom, 0);
+		width: 100%;
+		border-bottom: 1px solid @border-color-medium;
+
+		@media only screen and (max-width: @screen-sm-max) {
+			width: 100vw;
+			.rem(left, -@spacing-medium);
+		}
+	}
+}
+
+// SVG arrow for buttons
+.button-arrow () {
+	position: relative;
+	.rem(padding-left,@spacing-larger);
+
+	&:before {
+		content: " ";
+		position: absolute;
+		top: 50%;
+		.rem(left, @spacing-medium);
+		.em(margin-top, -6);
+		.size(7px, 12px);
+		background-color: @bg-color-lightest;
+		mask-image: url(../images/icons/svg/min/icn-001-2-arrow.svg);
+	}
+}

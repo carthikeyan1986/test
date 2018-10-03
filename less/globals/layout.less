@@ -1,0 +1,42 @@
+// =========================================================================
+// GLOBAL TEMPLATE DEFINITIONS
+// ========================================================================= */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+img,
+picture > img {
+	max-width: 100%;
+}
+input,
+button{
+	outline: 0;
+}
+body{	 
+    font-family: @font-family;
+	color: @font-color;
+	font-size: @font-size-base;
+}
+a{
+	color: @font-color;
+	text-decoration: none;
+}
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	@media (max-width: @screen-md-max) {
+		padding: 15px;
+	}
+}
+
+main{
+	padding: 67px 0;
+	border-bottom: 1px solid @border-color;
+	margin-bottom: 70px;
+	@media (max-width: @screen-xs-max) {
+		padding: 27px 0;
+		margin-bottom: 30px;
+	}
+}

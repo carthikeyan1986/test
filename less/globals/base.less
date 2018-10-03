@@ -1,0 +1,172 @@
+// ============================================================================
+//  GLOBAL DEFINITIONS
+// ============================================================================
+
+::-moz-selection {
+	background: @color-primary-grey;
+	color: @color-inverse;
+	text-shadow: none;
+}
+
+::selection {
+	background: @color-primary-grey;
+	color: @color-inverse;
+	text-shadow: none;
+}
+
+html {
+  font-size: inherit;
+}
+
+body {
+	overflow-x: hidden;
+	height: 100%;
+	.font-size(@font-size-base);
+	color: @font-color-default;
+	
+}
+
+
+//  TYPOGRAPHY
+// ============================================================================
+
+// Headlines
+
+h1,
+.hfl-h1 {
+	.em-two(margin, @spacing-large, 0);
+	.font-size(@font-size-h1);
+	line-height: @line-height-h1;
+}
+
+h2,
+.hfl-h2 {
+	.em-three(margin, @spacing-large, 0, @spacing-base);
+	.font-size(@font-size-h2);
+	line-height: @line-height-h2;
+}
+
+h3,
+.hfl-h3 {
+	.em-three(margin, @spacing-medium, 0, @spacing-large);
+	.font-size(@font-size-h3);
+	line-height: @line-height-h3;
+	font-weight: normal;
+}
+
+h4,
+.hfl-h4 {
+	.em-three(margin, @spacing-medium, 0, @spacing-large);
+	.font-size(@font-size-h4);
+	line-height: @line-height-h4;
+	font-weight: normal;
+}
+
+h5,
+.hfl-h5 {
+	margin: 0 0 @spacing-small-px 0;
+	.font-size(@font-size-h5);
+	line-height: @line-height-tiny;
+	font-weight: bold;
+}
+
+.font-tiny{
+	.font-size(@font-size-tiny);
+}
+//  SPACING/POSITION
+// ============================================================================
+
+p {
+	margin: 0;
+}
+
+p + p {
+	.rem(margin-top,@spacing-base);
+	
+}
+
+ul + p,
+ol + p {
+	.rem(margin-top,@spacing-large);
+}
+
+p + a {
+	display: block;
+	.rem(margin-top,@spacing-base);
+}
+
+
+//  Form input preventing the zoom.
+// ============================================================================
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .form-control {
+    .font-size(@font-size-medium);
+  }
+}
+ */
+//  LINKS
+// ============================================================================
+
+a {
+	color: @link-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: @link-color-hover;
+	text-decoration: underline;
+	cursor: pointer;
+
+	@media (hover: none) {
+		color: @link-color;
+		text-decoration: none;
+	}
+}
+
+a:focus,
+a:active {
+	outline: 0;
+	color: @link-color;
+	text-decoration: none;
+}
+
+
+a,
+a:hover,
+a:active,
+a:focus {
+	background-color: transparent;
+}
+
+
+//  LISTS
+// ============================================================================
+
+dd, dl, ol, ul {
+	margin: 0;
+	padding: 0;
+}
+
+//  IMAGES
+// ============================================================================
+
+img,
+picture > img {
+	max-width: 100%;
+}
+
+picture {
+	display: inline-block;
+
+	> img {
+		width: 100%;
+	}
+}
+
+
+//  hr
+// ============================================================================
+hr {
+	border-top: 1px solid @color-primary-grey;
+}

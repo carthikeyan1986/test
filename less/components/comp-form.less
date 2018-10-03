@@ -1,0 +1,123 @@
+// =========================================================================
+// GLOBAL STYLE FOR FORM INPUT ELEMENTS
+// ========================================================================= */
+.c_form{
+	input {
+		border:1px solid @border-color;
+		height: 45px;
+		line-height: 45px;
+		width: 100%;
+		border-radius: 5px;
+		box-shadow: 0 0 3px @border-color inset;
+		padding-left: @spacing-large-px;
+		position: relative;
+		z-index: 1;
+		background: transparent;
+		&:focus{		
+			outline:none;
+			border-color:@brand-color;
+			box-shadow: 0 0 3px @brand-color;
+		}
+		&.error{
+			border-color: @color-secondary-danger;
+		}
+	}
+	&--label{
+		display: block;
+		text-align: left;
+		position: absolute;
+		top: 22px;
+		left: @spacing-large-px;
+		transform: translateY(-50%);
+		transition: all .2s ease;
+		color: @color-light;
+	}
+	button{
+		background: @brand-color;
+		color: @color-lightest;
+		width: 100%;
+		height: @height-huge;
+		line-height:@height-huge;
+		border:none;
+		border-radius: 2px;
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		
+	}
+	.text__field{
+		margin-bottom: @height-large;
+		position: relative;
+		&--checkbox{
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			label{
+				padding-left: @spacing-medium-px * 2;
+			}
+			&--duplicate{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 18px;
+				width: 18px;
+				border-radius: 3px;
+				border: 1px solid @border-color;
+				&::after{
+					content: "";
+					position: absolute;
+					display: none;
+					left: 5px;
+					top: 2px;
+					width: 4px;
+					height: 7px;
+					border: solid white;
+					border-width: 0 3px 3px 0;
+					transform: rotate(45deg);
+				}
+			}
+			input{
+				position: absolute;
+				opacity: 0;
+				width: 20px;
+    			height: 20px;
+				&:checked ~ .text__field--checkbox--duplicate{
+					background: @brand-color;
+					border-color: @border-color;
+					&::after{
+						display: block;
+					}
+				}
+				
+			}
+			a{
+				color: @brand-color;
+			}
+		}
+		&--focus{
+			.c_form--label{
+				top: -15px;
+				left: 0;
+				font-size: @font-size-base;
+				font-weight: bold;
+				font-style: italic;
+				color: @font-color;
+			}
+			
+		}
+	}
+
+}
+
+
+.header__search {
+
+	&--box {
+		border-right-width:0;
+	}
+
+	button {
+	
+	}
+}
+
